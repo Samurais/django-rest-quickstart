@@ -36,3 +36,28 @@ Response
   }
 ]
 ```
+
+### Test REST API with Authentication
+* Basic auth
+```
+GET /example/ HTTP/1.1
+Host: 127.0.0.1:8000
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+```
+
+[Generate basic token](https://gist.github.com/Samurais/7f0d9ce24361025a447d7c5ce1adfdc2)
+
+Response
+```
+{
+  "auth": "None",
+  "user": "admin"
+}
+```
+
+Error Response
+```
+{
+  "detail": "Invalid username/password."
+}
+```
